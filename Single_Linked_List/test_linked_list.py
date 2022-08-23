@@ -9,10 +9,10 @@ ll=SingleLinkedList()
 ll.head=node1
 
 newnode=Node(0)
-ll.add_node(newnode,0)
+ll.addNode(newnode,0)
 
 newnode=Node(4)
-ll.add_node(newnode,-1)
+ll.addNode(newnode,-1)
 
 print('Before:')
 
@@ -21,12 +21,17 @@ print(ll)
 print('After adding:')
 
 newnode=Node(3)
-ll.add_node(newnode,2)
+ll.addNode(newnode,2)
 
 print(ll)
 
-ll.remove_node(2)
+ll.removeNode(2)
 
 print('After removing:')
+
+print(ll)
+
+
+ll.deleteNode(2)
 
 print(ll)

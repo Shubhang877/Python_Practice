@@ -37,7 +37,7 @@ class SingleLinkedList:
             yield node.value
             node=node.next
 
-    def add_node(self,node,pos) -> None: 
+    def addNode(self,node,pos) -> None: 
         if self.head is None:
             self.head=node
         else:
@@ -58,7 +58,7 @@ class SingleLinkedList:
                 node.next=temp.next
                 temp.next=node
 
-    def remove_node(self,pos) -> None:
+    def removeNode(self,pos) -> None:
         if self.head is None:
             return
         else:
@@ -86,6 +86,13 @@ class SingleLinkedList:
                     count=count+1
                 prev.next=temp.next
                 temp.next=None
+
+    def deleteNode(self,node) ->None: # Delete node without refrence to head pointer of linked list
+        temp=node.next
+        node.value=temp.value # Copying the data of next node in the current node
+        node.next=temp.next # Bypassing the current node
+        temp.next=None # Removing link for the node
+
                 
                 
 
