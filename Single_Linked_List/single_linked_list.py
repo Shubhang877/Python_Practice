@@ -133,6 +133,14 @@ class SingleLinkedList:
                temp.next=temp.next.next            # Skipping the node which is repeted (for ex: in 1,2,2,3 jumping from 1st 2 to 3)
         return head                                # Keep repeating logic i.e, keep jumping to next node untill new node is found
 
+    @staticmethod
+    def printUsingHead(head):
+        while head:
+            print(head.data,end=' ')
+            head=head.next
+        print(' ')
+
+
     @classmethod
     def convertListToLinkedList(cls,inputs):
         sll=SingleLinkedList()
@@ -140,13 +148,15 @@ class SingleLinkedList:
             sll.append(Node(val))
         return sll
 
-ll=SingleLinkedList.convertListToLinkedList([2,2,2,2,2])
-print(ll)
-op=ll.removeDuplicates(ll.head)
+if __name__=='main':
 
-while op:
-    print(op.data,end='-')
-    op=op.next
+    ll=SingleLinkedList.convertListToLinkedList([2,2,2,2,2])
+    print(ll)
+    op=ll.removeDuplicates(ll.head)
+
+    while op:
+        print(op.data,end='-')
+        op=op.next
 
 
 
